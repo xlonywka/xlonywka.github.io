@@ -712,6 +712,11 @@
                 <div class="slider__item-content"><img src="img/3.jpg" width=100%></img></div>
               </div>
             </div>
+			<div class="slider__item">
+              <div class="slider__item-container">
+                <div class="slider__item-content"><img src="img/4.jpg" width=100%></img></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -724,12 +729,7 @@
 
   <script src="js/chiefslider.js"></script>
 
-  <script>
-    const $slider = document.querySelector('[data-slider="chiefslider"]');
-    const slider = new ChiefSlider($slider, {
-      loop: false
-    });
-  </script>
+  
 
 
 
@@ -824,7 +824,17 @@
             }
         });
     </script>
-
+	<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // получаем корневой элемент слайдера
+  const $slider = document.querySelector('[data-slider="chiefslider"]');
+  new ChiefSlider($slider, {
+    loop: true,
+    autoplay: true, // включение автоматической смены слайдов
+    interval: 5000, // интервал в мс
+  });
+});
+</script>
     
 	
 
