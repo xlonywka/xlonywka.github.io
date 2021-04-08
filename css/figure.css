@@ -1,0 +1,146 @@
+
+.main-content-wrapper .about-olympiad .tab-content {
+    max-width: 864px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+.main-content-wrapper .about-olympiad .tab-content .tab-item {
+    padding-bottom: 32px
+}
+
+.main-content-wrapper .about-olympiad .tab-content .tab-item .tab-item-about {
+    border-bottom: 1px solid #102e3f;
+    margin-bottom: 48px
+}
+
+.main-content-wrapper .about-olympiad .tab-content .tab-item .tab-item-about .tab-item-title {
+    font-family: Blogger Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    margin-bottom: 48px
+}
+
+.main-content-wrapper .about-olympiad .tab-content .tab-item .tab-item-about .tab-item-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    padding-bottom: 48px
+}
+
+.main-content-wrapper .about-olympiad .tab-content .tab-item .tab-item-about .tab-item-link {
+    color: #00b8ec;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s
+}
+
+.main-content-wrapper .about-olympiad .tab-content .tab-item .tab-item-about .tab-item-link:hover {
+    color: #245aa9
+}
+
+.main-content-wrapper .about-olympiad .tab-content .tab-item-about:last-child {
+    border-bottom: none
+}
+
+.main-content-wrapper .main-content-background {
+    z-index: -1
+}
+
+.main-content-wrapper .main-content-background .main-content-image {
+    display: inline-block;
+    position: absolute;
+    z-index: -1
+}
+
+.main-content-wrapper .main-content-background .main-content-image-1 {
+    top: 170px;
+    right: -61px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-2 {
+    top: 531px;
+    right: 175px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-3 {
+    top: 407px;
+    left: 18px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-4 {
+    top: 655px;
+    left: -16px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-5 {
+    top: 779px;
+    left: 195px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-6 {
+    top: 1098px;
+    left: 89px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-7 {
+    top: 779px;
+    right: -84px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-8 {
+    top: 1330px;
+    right: -55px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-9 {
+    top: 1586px;
+    right: -52px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-10 {
+    top: 1704px;
+    right: -28px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-11 {
+    top: 1985px;
+    right: -41px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-12 {
+    top: 1844px;
+    left: -50px
+}
+
+.main-content-wrapper .main-content-background .main-content-image-13 {
+    top: 2275px;
+    left: 224px
+}
+
+.main-content-wrapper .main-content-wrapper-background {
+    z-index: -1
+}
+
+.main-content-wrapper .main-content-wrapper-background .main-content-background-image {
+    display: inline-block;
+    position: absolute;
+    z-index: -1
+}
+
+.main-content-wrapper .main-content-wrapper-background .main-content-background-image-1 {
+    bottom: 213px;
+    left: 0
+}
+
+.main-content-wrapper .main-content-wrapper-background .main-content-background-image-2 {
+    bottom: 98px;
+    right: 0
+}

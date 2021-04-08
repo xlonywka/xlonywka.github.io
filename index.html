@@ -4,7 +4,27 @@
 	<!-- Basic -->
     
     
-    
+    <style>
+
+    .slider__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .slider__item-container {
+      line-height: 300px;
+      font-size: 100px;
+      text-align: center;
+      height: 300px;
+      color: #000;
+    }
+	</style>
+	
 	<title>Холопьев Даниил - Python-программист</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -16,6 +36,7 @@
 	<link href="css/main.css" rel="stylesheet">
 
 	<!-- CSS -->
+	<link rel="stylesheet" href="css/chiefslider.css">
 	<link rel="stylesheet" href="css/glitche-basic.css">
 	<link rel="stylesheet" href="css/glitche-layout.css">
 	<link rel="stylesheet" href="css/ionicons.css">
@@ -23,11 +44,12 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/dark.css">
 
+
     <link rel="stylesheet" href="css/default.css">
 
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/custom.css">
-
+	<link rel="stylesheet" href="css/figure.css">
 	<!--[if lt IE 9]>
 	<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -58,10 +80,33 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<div class="main-content-wrapper">
+        <div class="container">
+            <div class="main-content-background">
+                <img src="img/main-content-image-1.svg" alt="main content background" class="main-content-image main-content-image-1">
+				<img src="img/main-content-image-2.svg" alt="main content background" class="main-content-image main-content-image-2">
+				<img src="img/main-content-image-3.svg" alt="main content background" class="main-content-image main-content-image-3">
+				<img src="img/main-content-image-4.svg" alt="main content background" class="main-content-image main-content-image-4">
+				<img src="img/main-content-image-2.svg" alt="main content background" class="main-content-image main-content-image-5">
+				<img src="img/main-content-image-1.svg" alt="main content background" class="main-content-image main-content-image-6">
+				<img src="img/main-content-image-5.svg" alt="main content background" class="main-content-image main-content-image-7">
+				<img src="img/main-content-image-6.svg" alt="main content background" class="main-content-image main-content-image-8">
+				<img src="img/main-content-image-4.svg" alt="main content background" class="main-content-image main-content-image-9">
+				<img src="img/main-content-image-7.svg" alt="main content background" class="main-content-image main-content-image-10">
+				<img src="img/main-content-image-2.svg" alt="main content background" class="main-content-image main-content-image-11">
+				<img src="img/main-content-image-2.svg" alt="main content background" class="main-content-image main-content-image-12">
+				<img src="img/main-content-image-4.svg" alt="main content background" class="main-content-image main-content-image-13">            
+			</div>
+        </div>
+        <div class="main-content-wrapper-background">
+            <img src="img/main-content-background-image-1.svg" alt="main content wrapper background" class="main-content-background-image main-content-background-image-1">
+			<img src="img/main-content-background-image-2.svg" alt="main content wrapper background" class="main-content-background-image main-content-background-image-2">
+        </div>
+    </div>
 	<!-- Container -->
 	<div class="container">
-
+		
 		<!-- Header -->
 		<header class="">
 			<div class="head-top">
@@ -655,6 +700,71 @@
 				</div>
 			</div>
 
+
+
+
+
+
+
+
+
+
+<div class="section skills">
+    <div class="content">
+        <div class="title">
+            <div class="title_inner">Моя команда на финале олимпиады НТИ 2021</div>
+			</div>
+		</div>
+	<div class="container">
+    <div class="slider" data-slider="chiefslider">
+      <div class="slider__container">
+        <div class="slider__wrapper">
+          <div class="slider__items">
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <div class="slider__item-content"><img src="img/1.jpg" width=100%></img></div>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <div class="slider__item-content"><img src="img/2.jpg" width=100%></img></div>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <div class="slider__item-content"><img src="img/3.jpg" width=100%></img></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="slider__control" data-slide="prev"></a>
+      <a href="#" class="slider__control" data-slide="next"></a>
+    </div>
+
+  </div>
+</div>
+
+  <script src="js/chiefslider.js"></script>
+
+  <script>
+    const $slider = document.querySelector('[data-slider="chiefslider"]');
+    const slider = new ChiefSlider($slider, {
+      loop: false
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
     			<!-- Contacts Info -->
 			<div class="section contacts" id="section-contacts">
 				<div class="content">
@@ -700,7 +810,7 @@
                     <a target="_blank" href="https://github.com/xlonywka" rel="nofollow"><span class="ion ion-social-github"></span></a>
                 
                 
-                    <a target="_blank" href="mailto:cheldanya@gmail.com" rel="nofollow"><span class="ion ion-social-google"></span></a>
+                    <a target="_blank" href="mailto:xlonywka@yandex.ru" rel="nofollow"><span class="ion ion-email"></span></a>
                 
 
 			</div>
@@ -739,5 +849,6 @@
     </script>
 
     
+	
 
 <script type="text/javascript" id="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","UA-172861502-1");</script>
