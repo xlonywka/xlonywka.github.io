@@ -1,0 +1,294 @@
+/* Общие настройки */
+html {
+    scroll-behavior: smooth; /* Включает плавную прокрутку */
+    scroll-padding-top: 30px; /* Чтобы фиксированная шапка не перекрывала заголовок */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0d0d0d; /* Темный фон */
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* Шапка */
+header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(13, 13, 13, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid #222;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav a {
+    margin-left: 25px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* Главный экран */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    color: #777;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: #fff;
+    color: #000;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #ccc;
+}
+
+/* Портфолио */
+.portfolio {
+    padding: 60px 0;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 60px;
+}
+
+/* Сетка карточек */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 80px 40px;
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* --- СЛАЙДЕР (Основная логика) --- */
+.compare-container {
+    position: relative;
+    width: 100%;
+    /* Квадратные пропорции по умолчанию (для часов) */
+    padding-bottom: 100%; 
+    background: #1a1a1a;
+    overflow: hidden;
+    cursor: col-resize;
+    user-select: none;
+    border-radius: 4px;
+}
+
+/* Класс для вертикальных фото (куртка, рюкзак) */
+.compare-container.vertical {
+    padding-bottom: 150%; /* Пропорция 2:3 */
+}
+
+.img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ключевое свойство: заполняет блок без искажений */
+    pointer-events: none;
+}
+
+/* Картинка ПОСЛЕ (сверху) */
+.img-wrapper.after {
+    z-index: 2;
+    /* Обрезаем правую половину картинки */
+    /* inset(top right bottom left) */
+    clip-path: inset(0 50% 0 0);
+}
+
+/* Элементы управления (Ползунок) */
+.handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Старт по центру */
+    z-index: 3;
+    pointer-events: none; /* Пропускает клики */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+}
+
+.handle-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.handle-circle {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 4;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 80px 0;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+}
+
+.links {
+    margin: 30px 0;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid transparent;
+}
+
+.social-link:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.copyright {
+    color: #444;
+    font-size: 0.8rem;
+}
+
+/* Анимированная стрелка вниз */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.scroll-down span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    margin: -2px;
+    animation: scroll 2s infinite;
+}
+
+.scroll-down span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.scroll-down span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes scroll {
+    0% { opacity: 0; transform: rotate(45deg) translate(-10px, -10px); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: rotate(45deg) translate(10px, 10px); }
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Одна колонка */
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .compare-container, 
+    .compare-container.vertical {
+        padding-bottom: 125%; /* Универсальный размер для мобилок */
+    }
+}
