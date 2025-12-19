@@ -27,7 +27,53 @@ a {
     color: inherit;
     transition: 0.3s;
 }
+/* Стили экрана загрузки */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0d; /* Цвет фона как у сайта */
+    z-index: 9999; /* Поверх всего */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
 
+.loader-content {
+    text-align: center;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Анимация круга */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Класс, который мы добавим через JS, когда всё загрузится */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Чтобы страница не скроллилась, пока идет загрузка */
+body.loading {
+    overflow: hidden;
+}
 /* Шапка */
 header {
     padding: 20px 0;

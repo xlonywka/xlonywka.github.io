@@ -1,3 +1,16 @@
+// Блокируем скролл при старте
+document.body.classList.add('loading');
+
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    
+    // Плавное исчезновение
+    setTimeout(() => {
+        preloader.classList.add('preloader-hidden');
+        document.body.classList.remove('loading');
+    }, 500); // Небольшая задержка в 0.5 сек для плавности
+});
+
 // --- СБРОС СКРОЛЛА В НАЧАЛО ---
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
